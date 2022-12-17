@@ -42,15 +42,23 @@ p {
   color: var(--dark);
 }
 
+h2,
+h3,
+p,
+#work article {
+  margin: 1rem 0;
+}
+
+.tagline {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--blue);
+  margin: 0;
+}
+
 /**********************************/
 /* DRY – no repeated attributes */
 /**********************************/
-
-h3,
-h4,
-p {
-  margin: 1rem 0;
-}
 
 main,
 footer {
@@ -117,16 +125,41 @@ nav li {
 }
 
 /**********************************/
-/* Main Section Styling */
+/* Main Section */
 /**********************************/
 
-main h3 {
+main h2 {
   border-bottom: #374A67 solid 2px;
 }
 
-/**********************************/
-/* Contact */
-/**********************************/
+/*** My Portfolio ***/
+
+#work article {
+  background: white;
+  border: var(--light-blue) solid 5px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.work-title {
+  background: var(--light-blue);
+  margin-bottom: 2em;
+  width: 250px;
+  padding: 10px;
+}
+
+.work-title p,
+.work-title h3 {
+  margin: 0;
+}
+
+.work-title a {
+  text-decoration: none;
+}
+
+/*** Contact Me ***/
 
 .contact ul {
   padding: 0;
