@@ -506,6 +506,8 @@ footer p {
     margin-top: 0;
   }
 
+  /* Modified the heading size and lessened gaps between navigation links and the tagline and its container */
+
   h1 {
     font-size: 3.5em;
     margin: 15px 0;
