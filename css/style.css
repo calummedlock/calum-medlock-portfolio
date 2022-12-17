@@ -31,27 +31,10 @@ body {
 }
 
 h1,
-h2,
-h3,
 h4,
 h5,
 h6 {
   margin: 0;
-  color: var(--blue);
-}
-
-p {
-  color: var(--dark);
-}
-
-a {
-  color: var(--link-colour);
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-a:hover {
-  color: var(--blue);
 }
 
 h2,
@@ -61,22 +44,68 @@ p,
   margin: 1rem 0;
 }
 
+p {
+  color: var(--dark);
+}
 
+a {
+  color: var(--link-colour);
+  transition: 0.3s;
+  font-weight: 500;
+}
 
 /**********************************/
 /* DRY – no repeated attributes */
 /**********************************/
 
-main,
-footer {
-  padding: var(--gap-spacing);
+/* Colours */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a:hover,
+.tagline,
+.contact a {
+  color: var(--blue); /* Blue Text Colour */
 }
 
 .title,
-.subtitle {
-  background: var(--light-blue);
-  
+.subtitle,
+.work-title {
+  background: var(--light-blue); /* Light Blue Text Colour */
 }
+
+nav a:hover,
+footer p {
+  color: var(--light); /* Light Text Colour */
+}
+
+header,
+footer {
+  background: var(--blue); /* Blue Background Colour */
+}
+
+/* Gap Spacing */
+
+header,
+.hero-banner {
+  padding: var(--gap-spacing) 0; /* Adds the horizontal paddings */
+}
+
+main,
+footer {
+  padding: var(--gap-spacing); /* Adds all of the paddings */
+}
+
+nav ul,
+.subtitle {
+  padding: 0 var(--gap-spacing); /* Adds the vertical paddings */
+}
+
+/* Links */
 
 nav li,
 .contact li {
@@ -93,25 +122,36 @@ nav a:hover,
   padding-bottom: 0em;
 }
 
+nav a,
+.work-title a,
+.contact a {
+  text-decoration: none;
+}
+
+
+/* Flex Properties */
+
+.title,
+nav ul,
+.hero-banner,
+#work article,
+.contact li {
+  display: flex;
+}
+
+.title,
+nav ul {
+  justify-content: space-between;
+}
+
 /**********************************/
 /* Header */
 /**********************************/
 
-header {
-  background: var(--blue);
-  padding: var(--gap-spacing) 0;
-}
-
 .title {
   margin-right: var(--gap-spacing);
-  display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 12px 0 var(--gap-spacing);
-}
-
-.title h1 {
-  display: inline-block;
 }
 
 .title img {
@@ -122,21 +162,15 @@ header {
 
 nav a {
   color: var(--light-blue);
-  text-decoration: none;
-  
   border-bottom: 2px solid var(--light-blue);
 }
 
 nav a:hover {
-  color: var(--light);
   border-bottom: 2px solid var(--light);
 }
 
 nav ul {
-  padding: 0 var(--gap-spacing);
   margin-bottom: 0;
-  display: flex;
-  justify-content: space-between;
 }
 
 /**********************************/
@@ -146,9 +180,7 @@ nav ul {
 .hero-banner {
   height: 200px;
   background-image: url("../images/02-hero-bg.jpg");
-  background-size: cover;
-  padding: var(--gap-spacing) 0;
-  display: flex;
+  background-size: cover;  
   flex-direction: column;
   justify-content: end;
   align-items: flex-end;
@@ -157,13 +189,11 @@ nav ul {
 .subtitle {
   margin-left: var(--gap-spacing);
   display: inline-block;
-  padding: 0 var(--gap-spacing);
 }
 
 .tagline {
   font-size: 1.5em;
   font-weight: bold;
-  color: var(--blue);
   margin: 0;
   display: inline-block;
   width: 253px;
@@ -183,7 +213,6 @@ main h2 {
   border: var(--light-blue) solid 5px;
   background-size: cover;
   height: 280px;
-  display: flex;
   flex-direction: column;
   justify-content: end;
   cursor: pointer;
@@ -196,7 +225,6 @@ main h2 {
 }
 
 .work-title {
-  background: var(--light-blue);
   margin-bottom: 2em;
   width: 225px;
   padding: 10px;
@@ -205,10 +233,6 @@ main h2 {
 .work-title p,
 .work-title h3 {
   margin: 0;
-}
-
-.work-title a {
-  text-decoration: none;
 }
 
 /*** Portfolio Photos ***/
@@ -240,17 +264,13 @@ main h2 {
 }
 
 .contact li {
-  display: flex;
   justify-content: center;
   margin-top: 1rem;
 }
 
 .contact a {
-  text-decoration: none;
   border-bottom: var(--blue) solid 2px;
-  color: var(--blue);
   font-size: 1.1em;
-  font-weight: 500;
 }
 
 .contact a:hover {
@@ -261,11 +281,6 @@ main h2 {
 /* Footer */
 /**********************************/
 
-footer {
-  background-color: var(--blue);
-}
-
 footer p {
-  color: var(--light);
   text-align: center;
 }
