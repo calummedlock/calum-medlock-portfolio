@@ -106,8 +106,7 @@ h4,
 h5,
 h6,
 a:hover,
-.tagline,
-.contact a {
+.tagline {
   color: var(--blue); /* Blue Text Colour */
 }
 
@@ -288,11 +287,14 @@ article:hover {
 }
 
 .contact a {
-  border-bottom: var(--blue) solid 2px;
+  color: var(--link-colour);
+  border-bottom: var(--link-colour) solid 2px;
   font-size: 1.1em;
 }
 
 .contact a:hover {
+  color: var(--blue);
+  border-bottom: var(--blue) solid 2px;
   margin-bottom: 0.2em;
 }
 
@@ -307,6 +309,8 @@ footer p {
 /**********************************/
 /* Responsive Layout for Tablet and Desktop */
 /**********************************/
+
+/* Tablet Screen */
 
 @media only screen and (min-width: 768px) {
 
@@ -330,6 +334,11 @@ footer p {
   }
 
   /* Header */
+
+  header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   header,
   nav,
@@ -370,6 +379,7 @@ footer p {
     border: none;
     text-align: end;
     padding-right: calc(var(--gap-spacing)/2);
+    margin-top: 0;
   }
 
   .right-hand {
@@ -408,6 +418,87 @@ footer p {
 
 /* Larger screens focuses on making the grid system for the portfolio as well as increase font size for headings */
 
+/* Screens larger than 1072px (Laptop) */
+
 @media only screen and (min-width: 1072px) {
+
+  /* More space for nav bar */
+
+  nav ul {
+    padding-left: calc(var(--tablet-spacing) * 2);
+  }
+
+  /* Grid System */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .grid-item:nth-child(even) {
+    margin: 0.5rem 0.5rem 0.5rem 0
+  }
+
+  .grid-item:nth-child(odd) {
+    margin: 0.5rem 0 0.5rem 0.5rem
+  }
+
+  .grid-item:first-child {
+    grid-column: 1 / span 2;
+    margin: 0 0 0.5rem;
+  }
+
+  .grid-item:last-child,
+  .grid-item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  /* Increased Font and Image Size */
+
+  h1 {
+    font-size: 2.5em;
+    margin: 15px 0;
+  }
+
+  .title img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  .tagline {
+    font-size: 2em;
+    width: 400px;
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  nav a {
+    font-size: 1.2em;
+  }
+
+}
+
+/* Screens larger than 1440px (Desktop) */
+
+@media only screen and (min-width: 1440px) {
+  main {
+    width: 1140px;
+    padding: var(--gap-spacing) 0;
+    margin: 0 auto;
+  }
+
+  .contact ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+
+  .contact li {
+    margin-top: 0;
+  }
 
 }
