@@ -1,4 +1,4 @@
-# calum-medlock-portfolio
+# Calum Medlock's Portfolio
 
 ## Introduction
 
@@ -20,7 +20,7 @@ To use this portfolio webpage, simply follow these steps:
 
 2. Once the webpage loads, you will see a navigation menu at the top of the page. Use this menu to explore the different sections of the website, including my biography, portfolio, and contact information.
 
-3. To view specific projects in my portfolio, click on the portfolio link in the navigation menu. This will take you to the section with a list of my completed projects. Click on a project to learn more about it and view examples of my work.
+3. To view specific projects in my portfolio, scroll down or click on the portfolio link in the navigation menu. This will take you to the section with a list of my completed projects. Click on a project to learn more about it and view examples of my work.
 
 4. If you have any questions or would like to discuss potential website projects with me, you can reach out to me via the contact information provided on the page.
 
