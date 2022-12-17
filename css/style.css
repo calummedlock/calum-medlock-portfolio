@@ -39,17 +39,33 @@ h6 {
 }
 
 p {
-  margin: 0;
   color: var(--dark);
 }
 
 /**********************************/
-/* DRY */
+/* DRY – no repeated attributes */
 /**********************************/
 
-.title, .subtitle {
+h3,
+h4,
+p {
+  margin: 1rem 0;
+}
+
+main,
+footer {
+  padding: var(--gap-spacing);
+}
+
+.title,
+.subtitle {
   background: var(--light-blue);
   padding: 0 var(--gap-spacing);
+}
+
+nav li,
+.contact li {
+  list-style: none;
 }
 
 /**********************************/
@@ -78,7 +94,6 @@ nav ul {
 }
 
 nav li {
-  list-style: none;
   border-bottom: 2px solid var(--light-blue);
 }
 
@@ -99,4 +114,33 @@ nav li {
 .subtitle {
   margin-left: var(--gap-spacing);
   text-align: end;
+}
+
+/**********************************/
+/* Main Section Styling */
+/**********************************/
+
+main h3 {
+  border-bottom: #374A67 solid 2px;
+}
+
+/**********************************/
+/* Contact */
+/**********************************/
+
+.contact ul {
+  padding: 0;
+}
+
+/**********************************/
+/* Footer */
+/**********************************/
+
+footer {
+  background-color: var(--blue);
+}
+
+footer p {
+  color: var(--light);
+  text-align: center;
 }
