@@ -49,12 +49,7 @@ p,
   margin: 1rem 0;
 }
 
-.tagline {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: var(--blue);
-  margin: 0;
-}
+
 
 /**********************************/
 /* DRY – no repeated attributes */
@@ -87,6 +82,11 @@ header {
 
 .title {
   margin-right: var(--gap-spacing);
+  display: inline-block;
+}
+
+.title h1 {
+  display: inline-block;
 }
 
 nav a {
@@ -117,11 +117,21 @@ nav li {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  align-items: flex-end;
 }
 
 .subtitle {
   margin-left: var(--gap-spacing);
-  text-align: end;
+  display: inline-block;
+}
+
+.tagline {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--blue);
+  margin: 0;
+  display: inline-block;
+  width: 253px;
 }
 
 /**********************************/
@@ -135,12 +145,13 @@ main h2 {
 /*** My Portfolio ***/
 
 #work article {
-  background: white;
   border: var(--light-blue) solid 5px;
+  background-size: cover;
   height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: end;
+  cursor: pointer;
 }
 
 .work-title {
@@ -159,6 +170,28 @@ main h2 {
   text-decoration: none;
 }
 
+/*** Portfolio Photos ***/
+
+#paul-finn {
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+
+#calman-design {
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+#me-brands {
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+
+#jetstone {
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+#simsllama {
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
 /*** Contact Me ***/
 
 .contact ul {
@@ -175,6 +208,8 @@ main h2 {
   text-decoration: none;
   border-bottom: var(--blue) solid 2px;
   color: var(--blue);
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 /**********************************/
