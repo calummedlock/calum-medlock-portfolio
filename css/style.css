@@ -11,6 +11,7 @@
   --link-colour: #007994;
   --gap-spacing: 5%;
   --article-background-overlay: #00799469;
+  --tablet-spacing: 10%;
 }
 
 /**********************************/
@@ -40,7 +41,7 @@ h6 {
 h2,
 h3,
 p,
-#work article {
+article {
   margin: 1rem 0;
 }
 
@@ -54,13 +55,37 @@ a {
 }
 
 /**********************************/
+/* Gap Spacing */
+/**********************************/
+
+header,
+.hero-banner {
+  padding: var(--gap-spacing) 0; /* Adds the horizontal paddings */
+}
+
+main,
+footer {
+  padding: var(--gap-spacing); /* Adds all of the paddings */
+}
+
+nav ul,
+.subtitle {
+  padding: 0 var(--gap-spacing); /* Adds the vertical paddings */
+}
+
+.title {
+  margin-right: var(--gap-spacing);
+  padding: 0 12px 0 var(--gap-spacing);
+}
+
+/**********************************/
 /* DRY – no repeated attributes */
 /**********************************/
 
 /* Transition Property */
 
 a,
-#work article {
+article {
   transition: 0.3s;
 }
 
@@ -68,7 +93,7 @@ a,
 /* Background Image Cover */
 
 .hero-banner,
-#work article {
+article {
   background-size: cover;
 }
 
@@ -102,23 +127,6 @@ footer {
   background: var(--blue); /* Blue Background Colour */
 }
 
-/* Gap Spacing */
-
-header,
-.hero-banner {
-  padding: var(--gap-spacing) 0; /* Adds the horizontal paddings */
-}
-
-main,
-footer {
-  padding: var(--gap-spacing); /* Adds all of the paddings */
-}
-
-nav ul,
-.subtitle {
-  padding: 0 var(--gap-spacing); /* Adds the vertical paddings */
-}
-
 /* Links */
 
 nav li,
@@ -148,7 +156,7 @@ nav a,
 .title,
 nav ul,
 .hero-banner,
-#work article,
+article,
 .contact li {
   display: flex; /* Turns display into flex */
 }
@@ -159,7 +167,7 @@ nav ul {
 }
 
 .hero-banner,
-#work article {
+article {
   flex-direction: column;
   justify-content: end;
   /* Puts the elements at the bottom and stacked vertically */
@@ -170,9 +178,7 @@ nav ul {
 /**********************************/
 
 .title {
-  margin-right: var(--gap-spacing);
   align-items: center;
-  padding: 0 12px 0 var(--gap-spacing);
 }
 
 .title img {
@@ -206,7 +212,6 @@ nav ul {
 }
 
 .subtitle {
-  margin-left: var(--gap-spacing);
   display: inline-block;
 }
 
@@ -227,14 +232,14 @@ main h2 {
 
 /*** My Portfolio ***/
 
-#work article {
+article {
   border: var(--light-blue) solid 5px;
   height: 280px;
   cursor: pointer;
   box-shadow: inset 0 0 0 50vw var(--article-background-overlay); /* CREDIT: https://stackoverflow.com/questions/36679649/how-to-add-a-color-overlay-to-a-background-image */
 }
 
-#work article:hover {
+article:hover {
   box-shadow: inset 0 0 0 50vw #00000000;
 }
 
@@ -297,4 +302,112 @@ main h2 {
 
 footer p {
   text-align: center;
+}
+
+/**********************************/
+/* Responsive Layout for Tablet and Desktop */
+/**********************************/
+
+@media only screen and (min-width: 768px) {
+
+  /* Gap Spacing */
+
+  main {
+    padding: var(--gap-spacing) var(--tablet-spacing); /* Adds all of the paddings */
+  }
+
+  nav ul {
+    padding: 0 var(--tablet-spacing);
+  }
+
+  .title {
+    margin-right: var(--tablet-spacing);
+    padding: 0 12px 0 var(--tablet-spacing);
+  }
+
+  .subtitle {
+    padding-right: var(--tablet-spacing);
+  }
+
+  /* Header */
+
+  header,
+  nav,
+  main section {
+    display: flex;
+  }
+
+  .title {
+    margin: 0;
+    width: 50%
+  }
+
+  nav {
+    width: 50%;
+    align-items: center;
+  }
+
+  nav ul {
+    margin: 0;
+    width: 100%;
+    padding-right: calc(var(--tablet-spacing) * 2);
+  }
+
+  /* Hero Section */
+
+  .hero-banner {
+    height: 400px;
+  }
+
+  /* Main */
+
+  main section {
+    margin-bottom: var(--gap-spacing);
+  }
+
+  main h2 {
+    width: 25%;
+    border: none;
+    text-align: end;
+    padding-right: calc(var(--gap-spacing)/2);
+  }
+
+  .right-hand {
+    width: 75%;
+    border-left: var(--blue) solid 3px;
+    padding-left: calc(var(--gap-spacing)/2);
+  }
+
+  /* The below ensures that the vertical line lines up correctly with the elements on the right side */
+
+  .right-hand p:first-child,
+  .right-hand article:first-child,
+  .right-hand li:first-child,
+  .right-hand ul {
+    margin-top: 0;
+  }
+
+  .right-hand p:last-child,
+  .right-hand article:last-child,
+  .right-hand li:last-child,
+  .right-hand ul {
+    margin-bottom: 0;
+  }
+
+  .contact li {
+    justify-content: start;
+  }
+
+  /* Footer */
+
+  footer {
+    padding: 20px var(--tablet-spacing);
+  }
+
+}
+
+/* Larger screens focuses on making the grid system for the portfolio as well as increase font size for headings */
+
+@media only screen and (min-width: 1072px) {
+
 }
