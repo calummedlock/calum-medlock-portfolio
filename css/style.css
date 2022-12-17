@@ -486,20 +486,62 @@ footer p {
 /* Screens larger than 1440px (Desktop) */
 
 @media only screen and (min-width: 1440px) {
+
+  /* Sets the main section within the 1140px width */
   main {
     width: 1140px;
     padding: var(--gap-spacing) 0;
     margin: 0 auto;
   }
 
+  /* Turns the links into a horizontal line */
+
   .contact ul {
     display: flex;
     justify-content: space-between;
-    margin-top: 12px;
+    margin-top: 24px;
   }
 
   .contact li {
     margin-top: 0;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    margin: 15px 0;
+  }
+
+  nav a {
+    font-size: 1.6em;
+  }
+
+  nav ul {
+    padding-left: var(--tablet-spacing);
+    justify-content: end;
+  }
+
+  nav li {
+    margin-left: var(--tablet-spacing);
+  }
+
+  .title img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
+
+  .subtitle {
+    padding-left: calc(var(--gap-spacing) / 2);
+  }
+
+  .tagline {
+    font-size: 2.9em;
+    width: 600px;
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 2.9em;
   }
 
 }
