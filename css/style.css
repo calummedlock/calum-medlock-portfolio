@@ -129,7 +129,7 @@ nav li {
 /**********************************/
 
 main h2 {
-  border-bottom: #374A67 solid 2px;
+  border-bottom: var(--blue) solid 2px;
 }
 
 /*** My Portfolio ***/
@@ -146,7 +146,7 @@ main h2 {
 .work-title {
   background: var(--light-blue);
   margin-bottom: 2em;
-  width: 250px;
+  width: 225px;
   padding: 10px;
 }
 
@@ -163,6 +163,18 @@ main h2 {
 
 .contact ul {
   padding: 0;
+}
+
+.contact li {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact li a {
+  text-decoration: none;
+  border-bottom: var(--blue) solid 2px;
+  color: var(--blue);
 }
 
 /**********************************/
