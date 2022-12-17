@@ -10,7 +10,7 @@ Thank you for visiting my portfolio webpage. I hope you find it useful in learni
 
 ## Installation
 
-N/a
+N/A
 
 ## Usage
 
