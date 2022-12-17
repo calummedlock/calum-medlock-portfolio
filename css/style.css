@@ -1,5 +1,5 @@
 /**********************************/
-/* Root Code */
+/* Color Palette and Spacing Variables */
 /**********************************/
 
 :root {
@@ -9,9 +9,10 @@
   --light-blue: #BDD4E7;
   --light: #F0F5FA;
   --link-colour: #007994;
-  --gap-spacing: 5%;
   --article-background-overlay: #00799469;
+  --gap-spacing: 5%;
   --tablet-spacing: 10%;
+  /* '--gap-spacing' and '--tablet-spacing' is used to modify the padding and margins in the mobile and tablet version to keep the design consistent. They are also used in the desktop version */
 }
 
 /**********************************/
@@ -19,7 +20,7 @@
 /**********************************/
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* sets box-sizing to border-box to lay out elements */
   
 }
 
@@ -488,6 +489,7 @@ footer p {
 @media only screen and (min-width: 1440px) {
 
   /* Sets the main section within the 1140px width */
+
   main {
     width: 1140px;
     padding: var(--gap-spacing) 0;
@@ -506,7 +508,15 @@ footer p {
     margin-top: 0;
   }
 
-  /* Modified the heading size and lessened gaps between navigation links and the tagline and its container */
+  /* Bigger avatar image */
+
+  .title img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
+
+  /* Made the heading size bigger */
 
   h1 {
     font-size: 3.5em;
@@ -516,6 +526,18 @@ footer p {
   nav a {
     font-size: 1.6em;
   }
+  
+  .tagline {
+    font-size: 2.9em;
+    width: 600px;
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 2.9em;
+  }
+
+  /* Improved spacing between the navigation links and in the subtitle container */
 
   nav ul {
     padding-left: var(--tablet-spacing);
@@ -526,24 +548,8 @@ footer p {
     margin-left: var(--tablet-spacing);
   }
 
-  .title img {
-    width: 80px;
-    height: 80px;
-    margin-right: 15px;
-  }
-
   .subtitle {
     padding-left: calc(var(--gap-spacing) / 2);
-  }
-
-  .tagline {
-    font-size: 2.9em;
-    width: 600px;
-    margin: 10px 0;
-  }
-
-  h2 {
-    font-size: 2.9em;
   }
 
 }
