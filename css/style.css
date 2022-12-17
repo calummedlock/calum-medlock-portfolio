@@ -8,7 +8,7 @@
   --blue: #374A67;
   --light-blue: #BDD4E7;
   --light: #F0F5FA;
-  --gap-spacing: 15px;
+  --gap-spacing: 5%;
 }
 
 /**********************************/
@@ -44,6 +44,15 @@ p {
 }
 
 /**********************************/
+/* DRY */
+/**********************************/
+
+.title, .subtitle {
+  background: var(--light-blue);
+  padding: 0 var(--gap-spacing);
+}
+
+/**********************************/
 /* Header */
 /**********************************/
 
@@ -53,12 +62,7 @@ header {
 }
 
 .title {
-  background: var(--light-blue);
   margin-right: var(--gap-spacing);
-}
-
-.title h1 {
-  margin-left: var(--gap-spacing);
 }
 
 nav a {
@@ -78,3 +82,21 @@ nav li {
   border-bottom: 2px solid var(--light-blue);
 }
 
+/**********************************/
+/* Hero Banner */
+/**********************************/
+
+.hero-banner {
+  height: 200px;
+  background-image: url("../images/02-hero-bg.jpg");
+  background-size: cover;
+  padding: var(--gap-spacing) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.subtitle {
+  margin-left: var(--gap-spacing);
+  text-align: end;
+}
