@@ -8,6 +8,7 @@
   --blue: #374A67;
   --light-blue: #BDD4E7;
   --light: #F0F5FA;
+  --link-colour: #007994;
   --gap-spacing: 5%;
 }
 
@@ -42,6 +43,16 @@ p {
   color: var(--dark);
 }
 
+a {
+  color: var(--link-colour);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
 h2,
 h3,
 p,
@@ -71,6 +82,16 @@ nav li,
   list-style: none;
 }
 
+nav a,
+.contact a {
+  padding-bottom: 0.2em;
+}
+
+nav a:hover,
+.contact a:hover {
+  padding-bottom: 0em;
+}
+
 /**********************************/
 /* Header */
 /**********************************/
@@ -92,6 +113,13 @@ header {
 nav a {
   color: var(--light-blue);
   text-decoration: none;
+  
+  border-bottom: 2px solid var(--light-blue);
+}
+
+nav a:hover {
+  color: var(--light);
+  border-bottom: 2px solid var(--light);
 }
 
 nav ul {
@@ -99,10 +127,6 @@ nav ul {
   margin-bottom: 0;
   display: flex;
   justify-content: space-between;
-}
-
-nav li {
-  border-bottom: 2px solid var(--light-blue);
 }
 
 /**********************************/
@@ -204,12 +228,16 @@ main h2 {
   margin-top: 1rem;
 }
 
-.contact li a {
+.contact a {
   text-decoration: none;
   border-bottom: var(--blue) solid 2px;
   color: var(--blue);
   font-size: 1.1em;
   font-weight: 500;
+}
+
+.contact a:hover {
+  margin-bottom: 0.2em;
 }
 
 /**********************************/
